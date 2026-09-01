@@ -6,4 +6,4 @@ I'm targeting Real Time on multi and single core SoC's, also on the small ones, 
 
 I worked a lot on navigation and communication components, and on Arm and RISC-V based SoC/MCU's from NXP, TI, ST and recently from Nordic Semiconductor.
 
-My educational background can be viewed on my [LinkedIn](uk.linkedin.com/in/kentdelpino)
+My educational background can be viewed on my [LinkedIn](http://uk.linkedin.com/in/kentdelpino)
