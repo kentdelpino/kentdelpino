@@ -46,7 +46,7 @@ An engineer with full-lifecycle product development experience, bridging the gap
 #### 📋 Overview
 `ICBMsg` is a highly specialized variant of **Inter-Core Messaging (ICMsg)** utilizing **Dynamically Allocated Buffers** across separate shared memory regions (`rx-region` and `tx-region`). It is built to stream massive quantities of lightweight, pre-processed telemetry packets, timestamps, and diagnostics upstream (remote CPU → main CPU) while piping commands downstream (main CPU → remote CPU).
 
-+-----------------------------------------------------------------------+|                              SHARED RAM                               ||  +---------------------------------+---------+---------------------+  ||  | RX Buffer Region (Dynamic Blks) |  ...    | TX Buffer Region    |  ||  +---------------------------------+---------+---------------------+  |+-----------------------------------------------------------------------+▲                                          ││ Upstream Telemetry                       ▼ Downstream Commands+--------------------+                       +--------------------+|     REMOTE CPU     |                       |      MAIN CPU      || (e.g., nRF54L Core)|                       | (Application Core) |+--------------------+                       +--------------------+
+![Inter-Processor Communication (IPC)](flipper_IPC.png)
 
 #### ⚙️ Technical Blueprint
 * **Capabilities:** Multi-Endpoint Routing, Multithreading support, and Zero-Copy memory paradigms.
