@@ -25,7 +25,7 @@ An engineer with product development experience, bridging the gap between bare-m
 * **[MSPM0 SPI Flash High-Efficiency Driver](https://bitbucket.org/delpino/mspm0-spi-flash/src/main/)**
   * Low-load, low-footprint, strong-throughput, optimized driver for the TI MSPM0G (Cortex-M0+).
 * **[MICK (Minimum Inter-process Communication Kernel)](https://bitbucket.org/delpino/mick/src/master/)**
-* *Of course, real nerds can present their own scheduler.* A custom, lightweight preemptive scheduler with tiny Inter-process Comm.
+* *Of course, real nerds can present their own scheduler.* A custom, lightweight **preemptive scheduler** with tiny Inter-process Comm.
 
 ---
 
