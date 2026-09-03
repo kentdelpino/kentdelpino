@@ -1,41 +1,31 @@
 # 👋 Hi, I'm Kent del Pino
-## Firmware & Electronics Engineer | Edge & Endpoint AI Specialist
+## Firmware & Electronics, Edge & Endpoint AI, full lifecycle experience.
 
-```c
-// The "Happy Nerd" Philosophy
-while (is_searching && is_studying) {
-    formulate();
-    do_it(); // High-efficiency execution
-}
-```
-
-An engineer with full-lifecycle product development experience, bridging the gap between bare-metal silicon, high-efficiency electronics, and embedded machine learning. I architect low-latency, real-time systems that squeeze maximum performance out of single and multi-core SoCs.
+An engineer with product development experience, bridging the gap between bare-metal silicon, high-efficiency electronics, and embedded machine learning. I architect low-latency, real-time systems that squeeze maximum performance out of multi and single-core SoCs.
 
 ---
 
-### 🚀 Technical Superpowers
+### 🚀 Technical skills
 
-* **Languages:** `C` (MISRA C compliance), `Python` (Qt / PySide6 for tooling), `Assembly`, `Pascal`
-* **Real-Time Architectures:** Multi & single-core SoCs, Bare-Metal setups, and RTOS environments:
-  * [Zephyr Project](https://zephyrproject.org)
-  * [Eclipse ThreadX](https://threadx.io)
-  * [Micrium µC/OS](https://micrium.com)
-* **Silicon Ecosystems:** Arm Cortex-M (M0+/M4/M33/M85) & RISC-V architectures from **NXP, Texas Instruments, STMicroelectronics, and Nordic Semiconductor**.
-* **Hardware & PCB Design:** High-efficiency drivers, [motor controllers](https://www.linkedin.com/feed/update/urn:li:activity:7467292623100219392/) and industrial [IoT hardware](https://www.instagram.com/kentdelpino/).
+* **Languages:** `C` (MISRA C), `Python` (Qt / PySide6 for tooling), `Assembly`, `Pascal`
+* **Real-Time Architectures:** Multi & single-core SoCs, Bare-Metal setups, Bootloaders, and RTOS environments, as in:
+  * [Zephyr Project](https://zephyrproject.org) & [Eclipse ThreadX](https://threadx.io) & [Nucleus RTOS](https://resources.sw.siemens.com/en-US/fact-sheet-nucleus-rtos/).
+* **Silicon Ecosystems:** Arm Cortex-M(R) & small RISC-V architectures from **NXP, Texas Instruments, STMicroelectronics, and Nordic Semiconductor**.
+* **Hardware & PCB Design:** High-efficiency drivers, [motor controllers](https://www.linkedin.com/feed/update/urn:li:activity:7467292623100219392/) and industrial [IoT hardware](https://www.instagram.com/kentdelpino/), and I like KiCad.
 * **Specialized Domains:** 
   * **Navigation:** GNSS & Inertial Navigation Systems (INS) — *Check out `/old_stuff` down in this repository for historical algorithmic roots applicable to modern blind-navigating drones.*
-  * **Connectivity:** NB-IoT, LTE, sub-GHz communications.
+  * **Connectivity:** NB-IoT, LTE, sub-GHz wireless and wired CAN Bus, CANopen. 
 
 ---
 
-### 🧠 Featured Custom Kernel & Hardware Drivers
+### 🧠 Featured Edge AI, Drivers & custom Kernel
 
-* **[MICK (Minimum Inter-process Communication Kernel)](https://bitbucket.org/delpino/mick/src/master/)**
-  * *Because every real nerd should present their own scheduler.* A custom, lightweight RTOS scheduler designed for deterministic inter-process communication.
 * **[emlearn_play](https://github.com/kentdelpino/emlearn_play)**
   * Pushing the boundaries of resource-constrained **Edge/Endpoint AI**.
 * **[MSPM0 SPI Flash High-Efficiency Driver](https://bitbucket.org/delpino/mspm0-spi-flash/src/main/)**
-  * High-throughput, optimized driver implementation for the TI MSPM0G (Cortex-M0+).
+  * Low-load, low-footprint, strong-throughput, optimized driver for the TI MSPM0G (Cortex-M0+).
+* **[MICK (Minimum Inter-process Communication Kernel)](https://bitbucket.org/delpino/mick/src/master/)**
+* *Of course, real nerds can present their own scheduler.* A custom, lightweight preemptive scheduler with tiny Inter-process Communication (IpC) capacity.
 
 ---
 
