@@ -8,7 +8,7 @@ An engineer with product development experience, bridging the gap between bare-m
 ### 🚀 Technical skills
 
 * **Languages:** `C` (MISRA C), `Python` (Qt / PySide6 for tooling), `Assembly`, `Pascal`
-* **Real-Time Architectures:** Multi & single-core SoCs, Bare-Metal setups, Bootloaders, and RTOS environments, as in:
+* **Real-Time Architectures:** Multi & single-core SoCs, Bare-Metal setups, Bootloaders, and RTOS environments as in:
   * [Zephyr Project](https://zephyrproject.org) & [Eclipse ThreadX](https://threadx.io) & [Nucleus RTOS](https://resources.sw.siemens.com/en-US/fact-sheet-nucleus-rtos/).
 * **Silicon Ecosystems:** Arm Cortex-M(R) & small RISC-V architectures from **NXP, Texas Instruments, STMicroelectronics, and Nordic Semiconductor**.
 * **Hardware & PCB Design:** High-efficiency drivers, [motor controllers](https://www.linkedin.com/feed/update/urn:li:activity:7467292623100219392/) and industrial [IoT hardware](https://www.instagram.com/kentdelpino/), and I like KiCad.
@@ -38,17 +38,12 @@ An engineer with product development experience, bridging the gap between bare-m
 
 ![Inter-Processor Communication (IPC)](flipper_IPC.png)
 
+The "Dynamically Allocated": The `rx-region` and `tx-region` are at compile time divided into **Blocks**/Buffers of fixed size, these are dynamically allocated per transaction.
+
 #### ⚙️ Technical Blueprint
 * **Capabilities:** Multi-Endpoint Routing, Multithreading support, and Zero-Copy memory paradigms.
 * **Scope Limits:** Strictly engineered for **RTOS-to-RTOS** or **RTOS-to-Bare-Metal** asymmetric multiprocessing (AMP). Deeply embedded application processors running full operating systems (like a Linux box) are explicitly out of scope.
 * **Topology:** Ideal for architectures where a remote Co-processor acts as a fully decoupled execution engine, crunching algorithmic tasks independently and streaming results.
-
-#### ⚖️ Architectural Trade-Offs
-
-| Paradigm | Component Layer | Concurrency & Threading Model | Memory & Performance Impact |
-| :--- | :--- | :--- | :--- |
-| **Pure ICBMsg** *(No Zbus)* | Core-Centric | **Task-agnostic.** On the receiving side, it relies entirely on execution within Interrupt Service Routines (ISR) rather than thread-level scheduling. | **Ultra-lightweight footprint.** Easily yields **5 Mbps bandwidth** for variable-length, multi-endpoint packets on nRF54L devices. Highly optimized for systems where remote I-Code must live entirely within tiny local SRAM rather than Flash/ROM. |
-| **With Zbus Proxy Agent** | Thread/Task-Centric | Provides high-level thread abstractions, bridging notifications cleanly across decoupled execution tasks. | Introduces minor abstraction overhead, but significantly simplifies asynchronous message routing across complex, multi-threaded firmware. |
 
 #### ⚡ Zero-Copy Mechanics
 
@@ -59,10 +54,8 @@ An engineer with product development experience, bridging the gap between bare-m
 
 ---
 
-### 👯 Let's Build Together
-This architecture is just one example of the source code, hardware design patterns, and systems engineering experience I bring to a team. If you want to talk low-latency firmware, custom schedulers, or edge inference, connect with me!
+### 👯 Let's make it smaller, smarter and sustainable.
+
+The above is just one example of what I can share with you and your organisation, in source code and experience.
 
 📬 **[Find me on LinkedIn](http://uk.linkedin.com/in/kentdelpino)**
-
-***
-*Crafted with ☕ and optimized C compilation patterns.*
