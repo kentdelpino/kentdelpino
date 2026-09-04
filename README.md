@@ -1,4 +1,5 @@
 # 👋 Hi, I'm Kent del Pino
+
 ## Firmware & Electronics, Edge & Endpoint AI, full lifecycle experience.
 
 An engineer with product development experience, bridging the gap between bare-metal silicon, high-efficiency electronics, and embedded machine learning. I architect low-latency, real-time systems that squeeze maximum performance out of multi and single-core SoCs.
@@ -8,37 +9,37 @@ An engineer with product development experience, bridging the gap between bare-m
 ### 🚀 Technical skills
 
 * **Languages:** `C` (MISRA C), `Python` (Qt / PySide6 for tooling), `Assembly`, `Pascal`
-* **Real-Time Architectures:** Multi & single-core SoCs, Bare-Metal setups, Bootloaders, and RTOS environments as in:
+* **Real-Time Architectures:** Multi & single-core SoCs, Bare-Metal setups, Bootloaders, and RTOS environments such as:
   * [Zephyr Project](https://zephyrproject.org) & [Eclipse ThreadX](https://threadx.io) & [Nucleus RTOS](https://resources.sw.siemens.com/en-US/fact-sheet-nucleus-rtos/).
 * **Silicon Ecosystems:** Arm Cortex-M(R) & small RISC-V architectures from **NXP, Texas Instruments, STMicroelectronics, and Nordic Semiconductor**.
 * **Hardware & PCB Design:** High-efficiency drivers, [motor controllers](https://www.linkedin.com/feed/update/urn:li:activity:7467292623100219392/) and industrial [IoT hardware](https://www.instagram.com/kentdelpino/), and I like KiCad.
-* **Specialized Domains:** 
-  * **Navigation:** GNSS & Inertial Navigation Systems (INS) — *Check out `/old_stuff` down in this repository for historical algorithmic roots applicable to modern blind-navigating drones.*
-  * **Connectivity:** NB-IoT, LTE, sub-GHz wireless and wired CAN Bus, CANopen. 
+* **Specialized Domains:**  
+  * **Navigation:** GNSS & Inertial Navigation Systems (INS) — *Check out `/old_stuff` down in this repository for historical algorithmic roots applicable to modern blind-navigating drones.*  
+  * **Connectivity:** NB-IoT, LTE, sub-GHz wireless and wired CAN Bus, CANopen.
 
 ---
 
 ### 🧠 Featured Edge AI, Drivers & custom Kernel
 
-* **[emlearn_play](https://github.com/kentdelpino/emlearn_play)**
+* **[emlearn_play](https://github.com/kentdelpino/emlearn_play)**  
   * Pushing the boundaries of resource-constrained **Edge/Endpoint AI**.
-* **[MSPM0 SPI Flash High-Efficiency Driver](https://bitbucket.org/delpino/mspm0-spi-flash/src/main/)**
+* **[MSPM0 SPI Flash High-Efficiency Driver](https://bitbucket.org/delpino/mspm0-spi-flash/src/main/)**  
   * Low-load, low-footprint, strong-throughput, optimized driver for the TI MSPM0G (Cortex-M0+).
-* **[MICK (Minimum Inter-process Communication Kernel)](https://bitbucket.org/delpino/mick/src/master/)**
-* *Of course, real nerds can present their own scheduler.* A custom, lightweight **preemptive scheduler** with tiny Inter-process Comm.
+* **[MICK (Minimum Inter-process Communication Kernel)](https://bitbucket.org/delpino/mick/src/master/)**  
+  * *Of course, real nerds can present their own scheduler.* A custom, lightweight **preemptive scheduler** with tiny Inter-process Communication (IPC) capacity.
 
 ---
 
 ### ⚡ Deep Dive: Inter-Core Block Messaging (ICBMsg)
 
-> **Angle of Attack:** Investigate deeply, formulate abstractly, implement efficiently. This is an architectural breakdown of optimized Inter-Processor Communication (IPC) scaled for ultra-low-power, dual-core devices like the **Nordic nRF54L**.
+> **Angle of Attack:** Investigate deeply, formulate abstractly, implement efficiently. This is an architectural breakdown of optimized Inter-Processor Communication (IPC) scaled for ultra-low-power, multi-core devices like the **Nordic nRF54**.
 
 #### 📋 Overview
 `ICBMsg` is a highly specialized variant of **Inter-Core Messaging (ICMsg)** utilizing **Dynamically Allocated Buffers** across separate shared memory regions (`rx-region` and `tx-region`). It is built to stream massive quantities of lightweight, pre-processed telemetry packets, timestamps, and diagnostics upstream (remote CPU → main CPU) while piping commands downstream (main CPU → remote CPU).
 
 ![Inter-Processor Communication (IPC)](flipper_IPC.png)
 
-The "Dynamically Allocated": The `rx-region` and `tx-region` are at compile time divided into **Blocks**/Buffers of fixed size, these are dynamically allocated per transaction.
+How the dynamic allocation works: The `rx-region` and `tx-region` are divided into **Blocks**/Buffers of fixed size at compile time. These are dynamically allocated per transaction.
 
 #### ⚙️ Technical Blueprint
 * **Capabilities:** Multi-Endpoint Routing, Multithreading support, and Zero-Copy memory paradigms.
@@ -47,15 +48,16 @@ The "Dynamically Allocated": The `rx-region` and `tx-region` are at compile time
 
 #### ⚡ Zero-Copy Mechanics
 
-* **Remote Co-Processor (Single-Threaded Zephyr Model):** 
+* **Remote Co-Processor (Single-Threaded Zephyr Model):**  
   True zero-copy operations are highly viable and explicitly recommended here to save clock cycles and prevent buffer copies in tightly constrained memory layouts.
-* **Main Application Processor (Multi-Threaded Layout):** 
+* **Main Application Processor (Multi-Threaded Layout):**  
   Zero-copy is bypassed intentionally here in favor of a clean **"fire-and-forget" abstraction**. Calling Zephyr's native `ipc_service_send()` automatically handles memory duplication, mitigating data race conditions across concurrent tasks.
 
 ---
 
-### 👯 Let's make it smaller, smarter and sustainable.
+### 👯 Let's make it smaller, smarter, and more sustainable.
 
-The above is just one example of what I can share with you and your organisation, in source code and experience.
+The above is just one example of what I can share with you and your organization, in source code and experience.
 
 📬 **[Find me on LinkedIn](http://uk.linkedin.com/in/kentdelpino)**
+
